@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import inquirer from "inquirer";
 import chalk from "chalk";
 const main = async () => {
@@ -7,7 +8,7 @@ const main = async () => {
             {
                 name: "task",
                 type: "input",
-                message: chalk.yellow("\nWhat do you want to add?"),
+                message: chalk.yellow("What do you want to add?"),
             },
         ]);
         taskList.push(task);
@@ -15,7 +16,7 @@ const main = async () => {
             {
                 name: "confirm",
                 type: "confirm",
-                message: chalk.yellow("\nDo you want to add more?"),
+                message: chalk.yellow("Do you want to add more?"),
             },
         ]);
         if (!confirm) {
@@ -24,7 +25,7 @@ const main = async () => {
     }
     ;
     taskList.forEach((task, index) => {
-        console.log(chalk.bold.bgGreenBright(`\n${index + 1} ${task}`));
+        console.log(chalk.bold.greenBright(`${index + 1} ${task}`));
     });
 };
 main();

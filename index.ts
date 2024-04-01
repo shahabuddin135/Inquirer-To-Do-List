@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import inquirer from "inquirer";
 import chalk from "chalk";
 
@@ -29,7 +30,7 @@ if(!confirm){
  };
  
  taskList.forEach((task,index) => {
-  console.log(chalk.bold.bgGreenBright(`${index + 1} ${task}`));
+  console.log(chalk.bold.greenBright(`${index + 1} ${task}`));
   
  });
 };
