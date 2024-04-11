@@ -9,7 +9,7 @@ const main = async () => {
                 {
                     name: "task",
                     type: "input",
-                    message: chalk.yellow("What do you want to add?"),
+                    message: chalk.blue.bold("What do you want to add?"),
                 },
             ]);
             taskList.push(task);
@@ -17,7 +17,7 @@ const main = async () => {
                 {
                     name: "confirm",
                     type: "confirm",
-                    message: chalk.yellow("Do you want to add more?"),
+                    message: chalk.bold.blue("Do you want to add more?"),
                 },
             ]);
             if (!confirm) {
@@ -36,7 +36,7 @@ const main = async () => {
             {
                 name: "update",
                 type: "confirm",
-                message: "Do you want to make changes to the list?",
+                message: chalk.cyan.bold("Do you want to make changes to the list?"),
             },
         ]);
         if (!update) {
@@ -62,11 +62,11 @@ const main = async () => {
                             name: "task",
                             type: "list",
                             choices: taskList,
-                            message: "Which task is Done?",
+                            message: chalk.blue.bold("Which task is Done?"),
                         },
                     ]);
                     let index = taskList.indexOf(task);
-                    if (index < -1) {
+                    if (index === -1) {
                         console.log(chalk.red.bold("Task not found!"));
                     }
                     else {

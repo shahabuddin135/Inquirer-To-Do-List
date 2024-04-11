@@ -11,7 +11,7 @@ const main = async () => {
         {
           name: "task",
           type: "input",
-          message: chalk.yellow("What do you want to add?"),
+          message: chalk.blue.bold("What do you want to add?"),
         },
       ]);
 
@@ -21,7 +21,7 @@ const main = async () => {
         {
           name: "confirm",
           type: "confirm",
-          message: chalk.yellow("Do you want to add more?"),
+          message: chalk.bold.blue("Do you want to add more?"),
         },
       ]);
 
@@ -44,7 +44,7 @@ const main = async () => {
       {
         name: "update",
         type: "confirm",
-        message: "Do you want to make changes to the list?",
+        message: chalk.cyan.bold("Do you want to make changes to the list?"),
       },
     ]);
 
@@ -55,7 +55,7 @@ const main = async () => {
         {
           name: "options",
           type: "list",
-          choices: ["Add a task", "Done a task", "Don't change"],
+          choices:  ["Add a task", "Done a task", "Don't change"],
         },
       ]);
 
@@ -70,13 +70,13 @@ const main = async () => {
               name: "task",
               type: "list",
               choices: taskList,
-              message: "Which task is Done?",
+              message:chalk.blue.bold("Which task is Done?"),
             },
           ]);
 
           let index = taskList.indexOf(task);
 
-          if (index < -1) {
+          if (index === -1) {
             console.log(chalk.red.bold("Task not found!"));
           } else {
             taskList.splice(index, 1);
