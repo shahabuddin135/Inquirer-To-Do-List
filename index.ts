@@ -21,7 +21,7 @@ const main = async () => {
         {
           name: "confirm",
           type: "confirm",
-          message: chalk.bold.blue("Do you want to add more?"),
+          message: chalk.bold.cyan("Do you want to add more?"),
         },
       ]);
 
