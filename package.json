@@ -3,7 +3,9 @@
   "version": "2.0.0",
   "description": "",
   "main": "index.js",
-  "bin":"index.js",
+  "bin": {
+    "inquirer-simple-to-do-list": "index.js"
+  },
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
